@@ -3,7 +3,7 @@ chai.use(require('chai-spies'));
 const { expect, spy } = chai;
 
 const { MaxHeap } = require('../lib/max_heap');
-const { isMaxHeap } = require('../lib/is_heap'); 
+const { isMaxHeap } = require('../lib/is_heap');
 
 
 describe('MaxHeap', () => {
@@ -71,7 +71,7 @@ describe('MaxHeap', () => {
         });
 
         context('when max heap property is broken', () => {
-            it ('should restore max heap property', () => {
+            it('should restore max heap property', () => {
                 let heap = new MaxHeap();
                 heap.insert(42);
                 heap.insert(32);
@@ -136,7 +136,7 @@ describe('MaxHeap', () => {
         });
 
         context('when the heap contains a single element', () => {
-            it ('should remove and return that element', () => {
+            it('should remove and return that element', () => {
                 let heap = new MaxHeap();
                 heap.array = [null, 42];
                 expect(heap.deleteMax()).to.equal(42);
@@ -145,7 +145,7 @@ describe('MaxHeap', () => {
         });
 
         context('when the heap contains no elements', () => {
-            it ('should return null', () => {
+            it('should return null', () => {
                 let heap = new MaxHeap();
                 expect(heap.deleteMax()).to.equal(null);
                 expect(heap.deleteMax()).to.equal(null);
@@ -165,7 +165,7 @@ describe('isMaxHeap(array)', () => {
         });
     });
 
-    context('when the given array does not have max heap property' , () => {
+    context('when the given array does not have max heap property', () => {
         it('should return false', () => {
             expect(isMaxHeap([null, 10, 5, 7, 2, 6])).to.equal(false);
             expect(isMaxHeap([null, 0, 5, 7])).to.equal(false);
@@ -174,5 +174,5 @@ describe('isMaxHeap(array)', () => {
 });
 
 describe('Leet Code #215', () => {
-    it ('https://leetcode.com/problems/kth-largest-element-in-an-array/')
+    it('https://leetcode.com/problems/kth-largest-element-in-an-array/')
 });
